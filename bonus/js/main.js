@@ -1,6 +1,3 @@
-// Descrizione:
-// Stampare a schermo un messaggio all’interno di un h1, utilizzando i data.
-// Aggiungere alla pagina un’immagine, presa anch’essa da un data.
 // Bonus:
 // In una cartella bonus:
 // Inseriamo un input per visualizzare in pagina un testo inserito da un utente.
@@ -13,13 +10,38 @@ var title = new Vue({
 	data: {
 	  message: 'Hello Vue!',
 	}
-  })
+});
 
-  var card = new Vue({
+var card = new Vue({
 	el: '#card',
 	data: {
-		image: 'https://picsum.photos/id/1040/600/400'
+		image: 'https://picsum.photos/id/1040/600/400',
+		quantity: 4
+	},
+	methods: {
+		addFunction: 
+			function()
+			{
+				this.quantity += 1;
+			},
+		removeFunction:
+			function()
+			{
+				if(!this.quantity == 0)
+				{
+					this.quantity -= 1;
+				}
+			
+			}
 	}
-  })
+});
+
+
+var main = new Vue({
+	el: '#main',
+	data: {
+		message: ''
+	}
+});
 
 console.log(card);

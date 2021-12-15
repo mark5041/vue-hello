@@ -24,10 +24,15 @@ nav h1 {
     width: auto;
 }
 
+.filter-section span {
+    font-size: 1.5em;
+    color: white;
+}
+
 .box {
     margin: 10px;
-    width: calc(100% / var(--var-box-size) - 20px);
     border-radius: 25px;
+    border: 1px solid black;
     padding: 20px 0;
 }
 
@@ -40,7 +45,44 @@ nav h1 {
     font-weight: bolder;
 }
 
-button > img {
+div > img {
     width: 100%;
     padding: 1em;
+}
+
+.my-btn{
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 1.3em;
+    width: 50px;
+}
+
+.icon {
+    padding-top: 2px;
+}
+
+.area {
+    border: 0;
+    border-radius: 0;
+    font-size: 1.3em;
+    padding: 28px 10px;
+}
+
+textarea.area {
+    min-height: 50px;
+}
+
+.area:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: none;
+}
+
+.area:focus::-webkit-input-placeholder {
+    font-size: 0.75em;
+    position: relative;
+    top: -25px; 
+    transition: 0.2s;
 }
